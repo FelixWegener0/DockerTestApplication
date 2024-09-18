@@ -1,6 +1,7 @@
 services:
   apache:
     image: httpd:latest
+    restart: always
     container_name: my-apache-app
     ports:
       - "8080:8080"
@@ -28,3 +29,5 @@ services:
       - "4000:4000"
     expose:
       - "4000:4000"
+volumes:
+  my-db:
